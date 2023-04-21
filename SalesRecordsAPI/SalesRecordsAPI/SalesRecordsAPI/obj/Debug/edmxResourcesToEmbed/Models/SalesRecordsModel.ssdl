@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalesRecordsAPIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SalesRecordsAPI.dbo.SalesRecords' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SalesRecords">
+    <Key>
+      <PropertyRef Name="Region" />
+      <PropertyRef Name="Country" />
+      <PropertyRef Name="Item_Type" />
+      <PropertyRef Name="Sales_Channel" />
+      <PropertyRef Name="Order_Priority" />
+      <PropertyRef Name="Order_Date" />
+      <PropertyRef Name="Order_ID" />
+      <PropertyRef Name="Ship_Date" />
+      <PropertyRef Name="Units_Sold" />
+      <PropertyRef Name="Unit_Price" />
+      <PropertyRef Name="Unit_Cost" />
+      <PropertyRef Name="Total_Revenue" />
+      <PropertyRef Name="Total_Cost" />
+      <PropertyRef Name="Total_Profit" />
+    </Key>
+    <Property Name="Region" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Item_Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sales_Channel" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Order_Priority" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Order_Date" Type="date" Nullable="false" />
+    <Property Name="Order_ID" Type="int" Nullable="false" />
+    <Property Name="Ship_Date" Type="date" Nullable="false" />
+    <Property Name="Units_Sold" Type="int" Nullable="false" />
+    <Property Name="Unit_Price" Type="float" Nullable="false" />
+    <Property Name="Unit_Cost" Type="float" Nullable="false" />
+    <Property Name="Total_Revenue" Type="float" Nullable="false" />
+    <Property Name="Total_Cost" Type="float" Nullable="false" />
+    <Property Name="Total_Profit" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SalesRecordsAPIModelStoreContainer">
+    <EntitySet Name="SalesRecords" EntityType="Self.SalesRecords" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SalesRecords].[Region] AS [Region], 
+    [SalesRecords].[Country] AS [Country], 
+    [SalesRecords].[Item_Type] AS [Item_Type], 
+    [SalesRecords].[Sales_Channel] AS [Sales_Channel], 
+    [SalesRecords].[Order_Priority] AS [Order_Priority], 
+    [SalesRecords].[Order_Date] AS [Order_Date], 
+    [SalesRecords].[Order_ID] AS [Order_ID], 
+    [SalesRecords].[Ship_Date] AS [Ship_Date], 
+    [SalesRecords].[Units_Sold] AS [Units_Sold], 
+    [SalesRecords].[Unit_Price] AS [Unit_Price], 
+    [SalesRecords].[Unit_Cost] AS [Unit_Cost], 
+    [SalesRecords].[Total_Revenue] AS [Total_Revenue], 
+    [SalesRecords].[Total_Cost] AS [Total_Cost], 
+    [SalesRecords].[Total_Profit] AS [Total_Profit]
+    FROM [dbo].[SalesRecords] AS [SalesRecords]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

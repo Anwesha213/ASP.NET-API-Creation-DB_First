@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalesRecordsAPIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SalesRecord">
+    <Key>
+      <PropertyRef Name="Region" />
+      <PropertyRef Name="Country" />
+      <PropertyRef Name="Item_Type" />
+      <PropertyRef Name="Sales_Channel" />
+      <PropertyRef Name="Order_Priority" />
+      <PropertyRef Name="Order_Date" />
+      <PropertyRef Name="Order_ID" />
+      <PropertyRef Name="Ship_Date" />
+      <PropertyRef Name="Units_Sold" />
+      <PropertyRef Name="Unit_Price" />
+      <PropertyRef Name="Unit_Cost" />
+      <PropertyRef Name="Total_Revenue" />
+      <PropertyRef Name="Total_Cost" />
+      <PropertyRef Name="Total_Profit" />
+    </Key>
+    <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Item_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sales_Channel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order_Priority" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Order_ID" Type="Int32" Nullable="false" />
+    <Property Name="Ship_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Units_Sold" Type="Int32" Nullable="false" />
+    <Property Name="Unit_Price" Type="Double" Nullable="false" />
+    <Property Name="Unit_Cost" Type="Double" Nullable="false" />
+    <Property Name="Total_Revenue" Type="Double" Nullable="false" />
+    <Property Name="Total_Cost" Type="Double" Nullable="false" />
+    <Property Name="Total_Profit" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SalesRecordsAPIContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SalesRecords" EntityType="Self.SalesRecord" />
+  </EntityContainer>
+</Schema>
